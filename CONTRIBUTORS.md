@@ -83,5 +83,4 @@
 - Sunita Koppar (skoppar)
 - Gi Kim (giryoong)
 - richatt
-- richatt
 - Hideki Tane
