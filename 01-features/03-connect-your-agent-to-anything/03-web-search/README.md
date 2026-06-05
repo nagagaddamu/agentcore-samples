@@ -4,6 +4,8 @@
 
 [Amazon Bedrock AgentCore Web Search Tool](https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/gateway.html) exposes web search as a fully managed, MCP-compliant tool through Amazon Bedrock AgentCore Gateway. Your agents discover and invoke it using the standard Model Context Protocol — no custom integrations, no infrastructure to manage.
 
+> 🔒 **Search Privacy**: The Web Search Tool queries an AWS-maintained index built from open-source and licensed content providers. No queries are routed to third-party search engines or external providers.
+
 ![Web Search Tool Architecture](images/tutorial-architecture.png)
 
 ## How the Web Search Tool Works
@@ -132,7 +134,7 @@ python 05-cleanup/cleanup.py --gateway-id <id> --user-pool-id <id> --role-name <
 
 ## Shared Utilities
 
-Demos 02–04 share authentication and agent utilities in `utils/`:
+Demos 02–04 share utilities in `utils/`:
 
 ```python
 from utils.gateway_auth import get_oauth_token, create_streamable_http_transport

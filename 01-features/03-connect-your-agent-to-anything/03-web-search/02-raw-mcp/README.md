@@ -4,6 +4,8 @@
 
 This demo calls the AgentCore Gateway directly over the MCP protocol — no agent framework involved. It's the simplest way to verify your Gateway and Web Search Tool target infrastructure are working correctly.
 
+> 🔒 **Search Privacy**: The Web Search Tool queries an AWS-maintained index built from open-source and licensed content providers. No queries are routed to third-party search engines or external providers.
+
 ```
 ┌──────────────────┐   tools/list    ┌─────────────────────────────────┐
 │  raw_mcp_call.py │ ──────────────▶ │  AgentCore Gateway              │

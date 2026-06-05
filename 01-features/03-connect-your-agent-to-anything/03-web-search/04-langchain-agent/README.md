@@ -4,6 +4,7 @@
 
 This demo shows the same Web Search Tool integration using LangChain and LangGraph instead of Strands. It uses `langchain-mcp-adapters` to connect to the AgentCore Gateway and `create_react_agent` from LangGraph for the agent loop.
 
+> 🔒 **Search Privacy**: The Web Search Tool queries an AWS-maintained index built from open-source and licensed content providers. No queries are routed to third-party search engines or external providers.
 ```
 ┌────────────┐  "Latest AWS announcements?"   ┌──────────────────────────┐
 │   User     │ ─────────────────────────────▶ │   LangChain Agent        │
@@ -49,7 +50,7 @@ from langchain_aws import ChatBedrockConverse
 from langgraph.prebuilt import create_react_agent
 
 model = ChatBedrockConverse(
-    model="us.anthropic.claude-sonnet-4-20250514-v1:0",
+    model="us.anthropic.claude-sonnet-4-6",
     region_name="us-east-1",
 )
 agent = create_react_agent(model, tools=tools)
@@ -68,7 +69,7 @@ pip install -r ../requirements.txt
 
 Run `01-setup-gateway/setup_gateway.py` first and export the environment variables it prints.
 
-Requires access to Claude Sonnet 4 (`us.anthropic.claude-sonnet-4-20250514-v1:0`) in us-east-1.
+Requires access to Claude Sonnet 4 (`us.anthropic.claude-sonnet-4-6`) in us-east-1.
 
 ## Usage
 
@@ -87,7 +88,7 @@ python web_search_langchain.py --query "Python 3.13 new features"
 {
   "Effect": "Allow",
   "Action": "bedrock:InvokeModel",
-  "Resource": "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-sonnet-4-20250514-v1:0"
+  "Resource": "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-sonnet-4-6"
 }
 ```
 
