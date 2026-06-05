@@ -4,6 +4,8 @@
 
 This demo shows the complete agent integration: a Strands agent automatically discovers and invokes the Web Search Tool to answer real-time questions with cited sources.
 
+> 🔒 **Search Privacy**: The Web Search Tool queries an AWS-maintained index built from open-source and licensed content providers. No queries are routed to third-party search engines or external providers.
+
 ```
 ┌────────────┐  "What's the latest AI news?"  ┌──────────────────────────┐
 │   User     │ ─────────────────────────────▶ │   Strands Agent          │
@@ -63,7 +65,7 @@ pip install -r ../requirements.txt
 
 Run `01-setup-gateway/setup_gateway.py` first and export the environment variables it prints.
 
-Requires access to Claude Sonnet 4 (`us.anthropic.claude-sonnet-4-20250514-v1:0`) in us-east-1.
+Requires access to Claude Sonnet 4 (`us.anthropic.claude-sonnet-4-6`) in us-east-1.
 
 ## Usage
 
@@ -82,7 +84,7 @@ python web_search_strands.py --query "Current price of Bitcoin"
 {
   "Effect": "Allow",
   "Action": "bedrock:InvokeModel",
-  "Resource": "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-sonnet-4-20250514-v1:0"
+  "Resource": "arn:aws:bedrock:us-east-1::foundation-model/us.anthropic.claude-sonnet-4-6"
 }
 ```
 
