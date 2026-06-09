@@ -56,6 +56,7 @@ lib/
 !04-infrastructure-as-code/cdk/typescript/knowledge-base-rag-agent/infrastructure/lib/
 !06-workshops/01-AgentCore-runtime/01-hosting-agent/05-java-agents/01-springai-with-bedrock-model/infra/lib/
 !06-workshops/01-AgentCore-runtime/01-hosting-agent/05-java-agents/02-embabel-with-bedrock-model/infra/lib/
+!02-use-cases/lakehouse-agent/deployment/advanced-agentcore-policy-gateway-interceptor/lib/
 lib64/
 parts/
 sdist/
@@ -262,6 +263,7 @@ Test-Downloads/
 ### Claude Code Assistant ###
 .claude/
 CLAUDE.md
+!**/03-code-agents-competition-e2e/coding_agents/claude-code/CLAUDE.md
 plan/
 
 ### draw.io source files (keep rendered PNG only) ###
